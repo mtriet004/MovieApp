@@ -9,7 +9,7 @@ const Banner = () => {
     <div className='w-full h-[600px] bg-banner bg-center bg-no-repeat bg-cover relative'>
         <div className='absolute w-full h-full top-0 left-0 bg-black opacity-40'/>
         <div className='w-full h-full flex items-center justify-center space-x-[30px] p-4 relative z-20'>
-            <div className='flex flex-col space-y-5 items-baseline w-[50%]'>
+            <div className='flex flex-col space-y-5 space-x-14 items-baseline w-[50%]'>
                 <p className='text-white bg-gradient-to-r from-red-600 to-red-300 py-2 px-3 text-md'>TV Show</p>
                 <div className='flex flex-col space-y-4'>
                     <h2 className='text-white text-[40px] font-bold'>Nghe nói em thích tôi</h2>

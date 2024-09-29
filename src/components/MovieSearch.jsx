@@ -1,36 +1,12 @@
-import { useContext } from "react";
-import React from "react";
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
+import React, { useContext } from "react";
 import { movieContext } from "../context/MovieProvider";
 
-const responsive = {
-  superLargeDesktop: {
-    // the naming can be any, depends on you.
-    breakpoint: { max: 4000, min: 3000 },
-    items: 10,
-  },
-  desktop: {
-    breakpoint: { max: 3000, min: 1200 },
-    items: 7,
-  },
-  tablet: {
-    breakpoint: { max: 1200, min: 600 },
-    items: 3,
-  },
-  mobile: {
-    breakpoint: { max: 600, min: 0 },
-    items: 2,
-  },
-};
-
-const MovieList = ({ title, data }) => {
+const MovieSearch = ({ title, data }) => {
   const { handleTrailer } = useContext(movieContext);
-
   return (
     <div className="text-white p-10 mb-10">
       <h2 className="text-xl uppercase mb-4">{title}</h2>
-      <Carousel responsive={responsive} className="flex items-center space-x-4">
+      <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
         {data &&
           data.length > 0 &&
           data.map((item) => (
@@ -54,9 +30,9 @@ const MovieList = ({ title, data }) => {
               </div>
             </div>
           ))}
-      </Carousel>
+      </div>
     </div>
   );
 };
 
-export default MovieList;
+export default MovieSearch;
